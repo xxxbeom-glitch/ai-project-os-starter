@@ -1,0 +1,18 @@
+---
+description: QA and release rules
+alwaysApply: true
+---
+
+# QA / Release
+
+Before marking work complete:
+- Compare result against Acceptance Criteria.
+- Run relevant test/typecheck/lint/build.
+- Check regression risk.
+- For UI, inspect key states and recovery paths.
+- For data/auth, verify ownership and failure behavior.
+- Report `PASS`, `FAIL`, and `NOT VERIFIED` distinctly.
+
+Never treat `NOT VERIFIED` as PASS.
+
+Release candidates additionally require the gates in `docs/07_QA_RELEASE_HARNESS.md`.
