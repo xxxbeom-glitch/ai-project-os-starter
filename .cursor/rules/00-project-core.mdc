@@ -1,0 +1,21 @@
+---
+description: Project core rules
+alwaysApply: true
+---
+
+# Project Core
+
+Before any work read:
+1. `AGENTS.md`
+2. `PROJECT_INSTRUCTIONS.md`
+3. `docs/CURRENT.md`
+4. Current Issue
+5. Only the linked specs/decisions
+
+Rules:
+- Do not change product policy without an approved Decision.
+- Do not work outside the current Task scope.
+- Do not infer missing requirements from old history.
+- Prefer existing patterns over new abstractions.
+- Mark unverified claims as NOT VERIFIED.
+- Completion requires evidence, not a confident statement.
