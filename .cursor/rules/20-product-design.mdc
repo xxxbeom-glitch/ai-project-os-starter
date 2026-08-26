@@ -1,0 +1,14 @@
+---
+description: Product and design guardrails
+alwaysApply: false
+---
+
+# Product / Design
+
+When changing UX/UI:
+- Read `docs/00_PROJECT_BRIEF.md`, `docs/01_PRODUCT_POLICY.md`, and `docs/09_DESIGN_SYSTEM.md` as needed.
+- Define the user goal before proposing UI.
+- Consider Default / Loading / Empty / Error / Disabled / Success states.
+- Check long text, narrow viewport, keyboard/focus, and recovery paths.
+- Reuse existing tokens/components before creating new variants.
+- Do not change pricing, account, privacy, or product policy through UI implementation.
