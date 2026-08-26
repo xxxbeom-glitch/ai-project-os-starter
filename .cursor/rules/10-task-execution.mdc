@@ -1,0 +1,30 @@
+---
+description: Task execution rules
+alwaysApply: true
+---
+
+# Task Execution
+
+Every Task should have:
+- Goal
+- Why
+- Scope
+- Out of Scope
+- Acceptance Criteria
+- Do Not Change
+- QA
+
+Before implementation:
+- Read the current Issue.
+- Inspect related files and existing patterns.
+- Confirm the Task can be completed without a new product decision.
+
+During implementation:
+- Stay inside Scope.
+- If product meaning is ambiguous, stop and report `DECISION NEEDED`.
+
+After implementation:
+- Review diff.
+- Remove unrelated changes.
+- Run relevant tests/build.
+- Report Result / Test / Commit / Risk / Not Verified.
