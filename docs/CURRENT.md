@@ -1,15 +1,28 @@
-# CURRENT — LinkPocket
+# CURRENT — AI Project OS Starter
 
 **Updated:** 2026-08-27
 
 ## 현재 단계
-ChatGPT / Claude Project Folder용 Project OS 예시 셋업 완료.
+`Starter v1.0 — READY`
 
-실제 제품 코드는 아직 시작하지 않은 교육용 상태다.
+ChatGPT / Claude Project Folder + GitHub + 개발 도구를 함께 사용할 수 있는 **AI Project Bootstrap / Project OS 교육용 기본 템플릿** 정리가 완료되었다.
 
-## 지금 기준으로 사용하는 파일
+이 Repository는 실제 제품 코드베이스가 아니라 새 프로젝트를 시작할 때 복사해서 사용하는 예시다.
+
+## 현재 Mode
+`BOOTSTRAP TEMPLATE`
+
+새 프로젝트에 복사한 뒤 `PROJECT_BOOTSTRAP.md`를 실행하고, 사용자 승인 후 `Project OS v0.1`을 만들면 해당 프로젝트가 `EXECUTION MODE`로 전환된다.
+
+## Canonical Source
+`GitHub Repository`
+
+ChatGPT / Claude Project에 업로드한 파일은 Snapshot이며, GitHub 최신본과 충돌하면 GitHub가 우선한다.
+
+## 현재 기준 파일
 - Project-wide rules: `../PROJECT_INSTRUCTIONS.md`
-- Project setup: `../PROJECT_FOLDER_SETUP.md`
+- Bootstrap protocol: `../PROJECT_BOOTSTRAP.md`
+- Project setup guide: `../PROJECT_FOLDER_SETUP.md`
 - Product: `00_PROJECT_BRIEF.md`
 - Policy: `01_PRODUCT_POLICY.md`
 - Business: `02_BUSINESS_MODEL.md`
@@ -17,56 +30,64 @@ ChatGPT / Claude Project Folder용 Project OS 예시 셋업 완료.
 - Architecture: `04_ARCHITECTURE.md`
 - Role pipeline: `05_AGENT_OPERATING_MODEL.md`
 - Engineering Harness: `06_ENGINEERING_HARNESS.md`
-- QA/Release: `07_QA_RELEASE_HARNESS.md`
+- QA / Release: `07_QA_RELEASE_HARNESS.md`
 - Decisions: `08_DECISIONS.md`
 - Design: `09_DESIGN_SYSTEM.md`
 - Research: `10_RESEARCH_REFERENCE.md`
 
-## 현재 교육용 Task
-`TSK-001 — LinkPocket MVP 첫 구현 Task 정의`
+## Starter의 운영 모델
 
-### Goal
-Project Brief와 Tech Stack을 기준으로 첫 구현 단위를 정의한다.
+```text
+BOOTSTRAP MODE
+사용자 인터뷰
+→ 기준 문서 작성
+→ Cross-document QA
+→ 사용자 승인
+→ Project OS v0.1
 
-### Task Flow
-1. Product / PM이 Task 정의
-2. Design이 필요한 UI 상태 정의
-3. Development가 구현 계획/결과 작성
-4. QA가 독립 검수
-5. PASS면 CURRENT 갱신
+EXECUTION MODE
+Task / GitHub Issue
+→ Implementation
+→ Commit / Test Evidence
+→ Independent QA
+→ PASS / FIX / DECISION NEEDED
+→ Close
+→ CURRENT update
+```
 
-### Acceptance Criteria
-- Goal / Why / Scope / Out of Scope 명확
-- Product Brief와 충돌 없음
-- Tech Stack과 충돌 없음
-- Design 상태 기준 포함
-- Do Not Change 포함
-- QA 방법 포함
+## Git Traceability
+Execution Mode의 코드 변경은 다음 연결을 기본값으로 한다.
 
-### Do Not Change
-- Product concept
-- MVP 범위
-- 수익모델
-- Platform = Web
-- 현재 확정 Stack
+`Decision / Spec → Task / Issue → Commit / PR / Test → QA`
+
+- 하나의 의미 있는 work cycle은 하나의 추적 가능한 Commit으로 남긴다.
+- 채팅 한 번마다 Commit하지 않는다.
+- Commit / PR에서 Task / Issue를 역추적할 수 있어야 한다.
+- 구현 완료와 최종 QA PASS를 구분한다.
+
+## 다음 행동
+이 Starter 자체에는 추가 기능 작업이 없다.
+
+실제 사용 시:
+1. 새 프로젝트용 Repository로 복사
+2. LLM에게 `README → PROJECT_INSTRUCTIONS → PROJECT_BOOTSTRAP` 순서로 읽게 함
+3. 사용자 인터뷰 진행
+4. LinkPocket 예시 내용을 실제 프로젝트로 교체
+5. Cross-document QA
+6. 사용자 승인
+7. Project OS v0.1 확정
+8. 첫 Execution Task / GitHub Issue 생성
 
 ## Blocker
 없음.
 
-## 다음 Role
-`Product / PM`
-
-`roles/PRODUCT_PM.md`와 `templates/TASK.md`를 사용해 TSK-001을 작성하는 것이 다음 예시 단계다.
-
 ## 이 파일의 운영 규칙
-
 `CURRENT.md`는 과거 일기를 쌓는 곳이 아니다.
 
-항상 다음만 짧게 유지한다.
-- 현재 단계
-- 현재 Task
+항상 다음만 유지한다.
+- 현재 단계 / Mode
+- 현재 Task 또는 목적
 - 현재 Blocker
-- 다음 Role
 - 바로 다음 행동
 
-과거의 완료 과정과 이유는 Decision / Task / Handoff에 남긴다.
+과거의 결정은 `DECISIONS`, 작업 이력은 Task / Issue, 구현 증거는 Commit / Test에 남긴다.
